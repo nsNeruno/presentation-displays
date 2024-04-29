@@ -161,7 +161,7 @@ class PresentationDisplaysPlugin : FlutterPlugin, ActivityAware, MethodChannel.M
   override fun onReattachedToActivityForConfigChanges(binding: ActivityPluginBinding) {}
 
   override fun onAttachedToActivity(binding: ActivityPluginBinding) {
-    this.context = binding.activity
+    this.context = binding.activity.applicationContext
     displayManager = context?.getSystemService(Context.DISPLAY_SERVICE) as DisplayManager
   }
 
